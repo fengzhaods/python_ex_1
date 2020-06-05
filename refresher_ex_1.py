@@ -227,7 +227,7 @@ print("start of part 3") # set breakpoint here
 l = s.split(" ")
 
 for i in range(len(l)):
-    # remove "," and "."
+    # remove "," and "." I later found this didn't work since there is no space before "," and "."
     if l[i] in [",", "."]:
         del l[i]
     # Change every 2 word into the uppercase
