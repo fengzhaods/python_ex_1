@@ -313,6 +313,7 @@ filler = "..."
 # your code here
 for x in range(5, 16):
     abb_str = s[0:x] + filler + s[-x:] # using the filler to abbreviate s
+    # see if the length of abb_str is longer than that of s
     if len(abb_str) > len(s):
         print(x, s)
     else:
