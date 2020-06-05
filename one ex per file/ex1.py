@@ -14,7 +14,14 @@ print("start of part 1") # set breakpoint here
 L = [0, [], [1,2,3,4], [[5],[6,7]], [8,9,10]]
 print(L)
 # your code
-
+N0 = L[0]
+N1 = L[2][1]
+N2 = L[2][2]
+N3 = [L[3][0][0], L[3][1][0]]
+N4 = L[4][0]
+N5 = L[4][2]
+N = [N0, N1, N2, N3, N4, N5]
+print(N)
 
 print("end of 1") # set breakpoint here 
 '''
