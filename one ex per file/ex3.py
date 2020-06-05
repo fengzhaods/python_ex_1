@@ -14,7 +14,18 @@
 # LANGUAGE
 print("start of part 3") # set breakpoint here
 # your code here
+# - break s into a list of words
+l = s.split(" ")
 
+for i in range(len(l)):
+    # remove "," and "."
+    if l[i] in [",", "."]:
+        del l[i]
+    # Change every 2 word into the uppercase
+    elif i % 2 == 0:
+        l[i] = l[i].upper()
+    # print each word in the list
+    print(l[i])
 
 print("end of 3") # set breakpoint here 
 '''
