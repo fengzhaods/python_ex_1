@@ -26,7 +26,8 @@
 # Task: create a variable with your name and print out Hello <name>
 print("start of part 0") # set breakpoint here
 # your code here
-
+name = input("What's your name?")
+print("Hello,",name)
 
 print("end of 0") # set breakpoint here 
 '''
@@ -108,8 +109,14 @@ print("start of part 1") # set breakpoint here
 L = [0, [], [1,2,3,4], [[5],[6,7]], [8,9,10]]
 print(L)
 # your code
-
-
+N0 = L[0]
+N1 = L[2][1]
+N2 = L[2][2]
+N3 = [L[3][0][0], L[3][1][0]]
+N4 = L[4][0]
+N5 = L[4][2]
+N = [N0, N1, N2, N3, N4, N5]
+print(N)
 print("end of 1") # set breakpoint here 
 '''
 
@@ -160,7 +167,10 @@ print(newL) # [0, 2, 3, [5, 6], 8, 10]
 print("start of part 2") # set breakpoint here
 s = "Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant whitespace. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects."
 # your code here
-
+l = s.split(".")
+print("There are", len(l), "sentences in total.")
+for sen in l:
+    print(sen)
 print("end of 2") # set breakpoint here 
 '''
 
@@ -213,7 +223,18 @@ for e in sentence_list:
 # LANGUAGE
 print("start of part 3") # set breakpoint here
 # your code here
+# - break s into a list of words
+l = s.split(" ")
 
+for i in range(len(l)):
+    # remove "," and "."
+    if l[i] in [",", "."]:
+        del l[i]
+    # Change every 2 word into the uppercase
+    elif i % 2 == 0:
+        l[i] = l[i].upper()
+    # print each word in the list
+    print(l[i])
 
 print("end of 3") # set breakpoint here 
 '''
@@ -290,7 +311,12 @@ print("start of part 4") # set breakpoint here
 s = "A very long description" # a long string
 filler = "..."
 # your code here
-
+for x in range(5, 16):
+    abb_str = s[0:x] + filler + s[-x:] # using the filler to abbreviate s
+    if len(abb_str) > len(s):
+        print(x, s)
+    else:
+        print(x, abb_str)
 
 print("end of 4") # set breakpoint here 
 '''
